@@ -11,14 +11,24 @@ export default function Home() {
     new Client('Pedro', 54, '4')
   ]
 
+  function clientSelected(client: Client){
+    console.log(`Editando ${client.name}`)
+  }
+  function clientTrash(client: Client){
+    console.log(`Apagando ${client.name}`)
+  }
+
   return (
     <div className={`
       flex justify-center items-center h-screen
-      bg-gradient-to-r from-blue-500 to-purple-500
+      bg-gradient-to-r from-blue-500 to-green-400
       text-white
     `}>
       <Layout title="Cadastro Simples">
-        <Table clients={clients}></Table>
+        <Table clients={clients} 
+        clientSelected={clientSelected}
+        clientTrash={clientTrash}
+        />
       </Layout>
     </div>
   )

@@ -7,7 +7,7 @@ module.exports = {
     safelist: [
       /^bg-/,
       /^from-/,
-      /^to-/
+      /^to-/,
     ]
   },
   theme: {
